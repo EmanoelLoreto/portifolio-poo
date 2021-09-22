@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" />
+
+  <title>Portifólio</title>
+
+  <link rel="stylesheet" href="portifolio.css">
+</head>
+
+<body>
+
+  <div class="content">
+    <header>
+      <div class="div-nome-header">Portifólio</div>
+      <nav>
+        <ul>
+          <a href="/Portifolio/views/home/home.html">home</a>
+          <a href="/Portifolio/views/portifolio/portifolio.html">projetos/portifólio</a>
+          <a href="/Portifolio/views/skills/skills.html">skills</a>
+        </ul>
+      </nav>
+      <a href="/Portifolio/views/contact/contact.html" class="a-contato">contato</a>
+    </header>
+
+    <main>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <span>
+            Primeira partipação em projeto interno como estagiário, sistema focado em listar todos os colaboradores
+            da empresa com suas respectivas skills, certificados e formações, afim de estruturar bons times
+            para determinados projetos. Com o framework de código aberto <B>VueJs</B> no front-end e <b>PHP</b>
+            para o backend.
+          </span>
+          <img src="../../assets/meta-skills.png" style="width:100%">
+          <span>Março de 2020 até setembro de 2020</span>
+        </div>
+        
+        <div class="mySlides fade">
+          <span>
+            Segunda partipação em projeto interno como estagiário, sistema focado em realizar avaliações internas de
+            profissionais onde companheiros de equipe, POs e superioes podiam avaliar o profissional e o próprio
+            profissional se auto avaliar afim de formar uma avaliação completa. Com o framework de código aberto <B>VueJs</B> no front-end e <b>AdonisJs</b>
+            para o backend.
+          </span>
+          <img src="../../assets/meta-people.png" style="width:100%">
+          <span>Setembro de 2020 até julio de 2021</span>
+        </div>
+        
+        <div class="mySlides fade">
+          <span>
+            Projeto atual, participação na parte do front-end no cliente Benoit, como Desenvolvedor JavaScript Júnior,
+            sistema para vendedores internos da loja, como ponto de venda, afim de realizar negociações e listagem de
+            produtos. Com a biblioteca de código aberto <B>ReactJs</B> no front-end, <b>React Native</b> para o app
+            android e <b>Java</b> para o backend.
+          </span>
+          <img src="../../assets/benoit.png" style="width:100%">
+          <span>Projeto atual desde julho de 2021</span>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+      </div>
+    </main>
+
+    <footer>
+    </footer>
+
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+</body>
+
+</html>
